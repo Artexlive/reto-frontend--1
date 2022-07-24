@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+    --montserrat: 'Montserrat', sans-serif;
+    --fraunces: 'Fraunces', serif;
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Darkcyanoscuro: hsl(158, 33%, 29%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--montserrat);
+    background-color: var(--Cream);
+    font-size: 14px;
+}
+
+.card {
+    background-color: var(--White);
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+}
+
+.card_one_section_img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card_one_section {
+    width: 300px;
+    overflow: hidden;
+}
+
+.card_two_section {
+    width: 300px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+h2 {
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: var(--Darkgrayishblue);
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: var(--fraunces);
+    font-size: 2.5em;
+    color: var(--Verydarkblue);
+    line-height: 1;
+}
+
+.card_two_section_descripcion {
+    line-height: 1.5;
+    color: var(--Darkgrayishblue);
+}
+
+.card_two_section_precios {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.card_two_section_precios_descuento {
+    font-family: var(--fraunces);
+    font-weight: 700;
+    font-size: 2.5em;
+    color: var(--Darkcyan);
+}
+
+.card_two_section_precios_original {
+    text-decoration: line-through;
+    color: var(--Darkgrayishblue);
+}
+
+button {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--Darkcyan);
+    border: none;
+    color: var(--White);
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 15px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button:hover {
+    background-color: var(--Darkcyanoscuro);
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+   
+    .card {
+        max-width: 400px;
+        flex-direction: column;
+    }
+    
+    .card_one_section_img {
+       content: url(images/image-product-mobile.jpg);
+    }
+
+    .card_one_section {
+        width: 100%;
+    }
+
+    .card_two_section {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .card_two_section_descripcion {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 240px)  {
+
+    .card_two_section_precios {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 410px) {
+    .card {
+        margin: 30px 10px;
+    }
+}
